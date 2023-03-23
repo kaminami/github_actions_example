@@ -1,6 +1,9 @@
-name: run-groovy-application
-run-name: main branch is updated by ${{ github.actor }}
-on: [push]
+name: run-groovy-application-on-schedule
+run-name: スケジューラを使用した定期実行 ${{ github.actor }}
+on:
+  schedule:
+    # TODO 動作確認後、停止
+    - cron: '*/5 * * * *'
 jobs:
   run-groovy-application:
     runs-on: ubuntu-22.04
