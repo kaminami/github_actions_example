@@ -11,5 +11,5 @@ jobs:
         with:
           java-version: '16'
           distribution: 'adopt'
-          cache: maven
+          cache: 'gradle'
       - run: ./gradlew build --no-daemon
