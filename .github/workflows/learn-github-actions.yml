@@ -12,4 +12,4 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
           cache: 'gradle'
-      - run: chmode +x ./gradlew build --no-daemon
+      - run: chmod +x ./gradlew build --no-daemon
