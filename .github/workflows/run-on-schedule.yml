@@ -12,8 +12,8 @@ name: run-groovy-application-on-schedule
 run-name: スケジューラを使用した定期実行 ${{ github.actor }}
 on:
   schedule:
-    // 30日おきに実行
-    - cron: '* * */30 * *'
+    // utcで指定。日本時間では毎月1日、午前9時頃となる。
+    - cron: '0 0 1 * *'
 jobs:
   run-groovy-application:
     runs-on: ubuntu-22.04
