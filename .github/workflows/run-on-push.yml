@@ -1,5 +1,5 @@
 name: run-groovy-application-on-push
-run-name: mainブランチがpusされた際に実行 ${{ github.actor }}
+run-name: mainブランチがpushされた際に実行 ${{ github.actor }}
 on: [push]
 jobs:
   run-groovy-application:
