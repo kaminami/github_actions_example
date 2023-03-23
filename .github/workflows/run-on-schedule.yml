@@ -1,9 +1,19 @@
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+# │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+# │ │ │ │ │
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *
+
 name: run-groovy-application-on-schedule
 run-name: スケジューラを使用した定期実行 ${{ github.actor }}
 on:
   schedule:
-    # TODO 動作確認後、停止
-    - cron: '*/5 * * * *'
+    // 30日おきに実行
+    - cron: '* * */30 * *'
 jobs:
   run-groovy-application:
     runs-on: ubuntu-22.04
